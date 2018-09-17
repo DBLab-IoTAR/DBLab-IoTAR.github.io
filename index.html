@@ -1,0 +1,758 @@
+<html>
+    <head>
+      <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+      <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+      <script src="../js/aframe-mouse-cursor-component.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+      <script src="../js/ar.js"></script>
+      <script src="../js/featherlight.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/featherlight.css"/>
+        <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+        <link rel="stylesheet" type="text/css" href="css/extra.css"/>
+
+        <!--script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-53688RZ');</script-->
+        <!-- End Google Tag Manager -->
+        <!-- Google Tag Manager (noscript) -->
+        <!--noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53688RZ"
+                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript-->
+        <!-- End Google Tag Manager (noscript) -->
+
+        <script>
+            var marker1 = false;
+            var marker2 = false;
+            var marker3 = false;
+            var marker4 = false;
+
+            AFRAME.registerComponent('markerhandler', {
+                tick: function () {
+                    if (document.querySelector('#marker1').object3D.visible == true) {
+                        if (marker1 == false) {
+                            $('#marker1').find('.js-spawn').each(function (index, item) {
+                                item.emit('spawn');
+                            });
+
+                            $('.js-product-2').find('#js-gallery-item-1').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-item-2').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-item-3').attr('visible', 'false');
+                            $('.js-product-2').find('#add-to-cart-button').attr('visible', 'false');
+                            $('.js-product-2').find('#add-to-cart-button-text').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-thumb-box-1').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-thumb-box-2').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            $('.js-product-3').find('#js-gallery-item-1').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-item-2').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-item-3').attr('visible', 'false');
+                            $('.js-product-3').find('#add-to-cart-button').attr('visible', 'false');
+                            $('.js-product-3').find('#add-to-cart-button-text').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-thumb-box-1').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-thumb-box-2').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            // $('.js-product-4').find('#start-3d-animation-button').attr('visible', 'false');
+                            // $('.js-product-4').find('#start-3d-animation-button-text').attr('visible', 'false');
+                            // $('.js-product-4').find('#add-to-cart-button').attr('visible', 'false');
+                            // $('.js-product-4').find('#add-to-cart-button-text').attr('visible', 'false');
+                            // $('.js-product-4').find('#js-gallery-thumb-box-1').attr('visible', 'false');
+                            // $('.js-product-4').find('#js-gallery-thumb-box-2').attr('visible', 'false');
+                            // $('.js-product-4').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            $('.js-product-1').find('#js-gallery-item-1').attr('visible', 'true');
+                            $('.js-product-1').find('#add-to-cart-button').attr('visible', 'true');
+                            $('.js-product-1').find('#add-to-cart-button-text').attr('visible', 'true');
+                            $('.js-product-1').find('#js-gallery-thumb-box-1').attr('visible', 'true');
+                            $('.js-product-1').find('#js-gallery-thumb-box-2').attr('visible', 'true');
+                            $('.js-product-1').find('#js-gallery-thumb-box-3').attr('visible', 'true');
+
+                            marker1 = true;
+                            marker2 = false;
+                            marker3 = false;
+                            marker4 = false;
+                        }
+
+                    }
+                    if (document.querySelector('#marker2').object3D.visible == true) {
+                        if (marker2 == false) {
+                            $('#marker2').find('.js-spawn').each(function (index, item) {
+                                item.emit('spawn');
+                            });
+
+                            $('.js-product-1').find('#js-gallery-item-1').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-item-2').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-item-3').attr('visible', 'false');
+                            $('.js-product-1').find('#add-to-cart-button').attr('visible', 'false');
+                            $('.js-product-1').find('#add-to-cart-button-text').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-thumb-box-1').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-thumb-box-2').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            $('.js-product-3').find('#js-gallery-item-1').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-item-2').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-item-3').attr('visible', 'false');
+                            $('.js-product-3').find('#add-to-cart-button').attr('visible', 'false');
+                            $('.js-product-3').find('#add-to-cart-button-text').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-thumb-box-1').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-thumb-box-2').attr('visible', 'false');
+                            $('.js-product-3').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            // $('.js-product-4').find('#start-3d-animation-button').attr('visible', 'false');
+                            // $('.js-product-4').find('#start-3d-animation-button-text').attr('visible', 'false');
+                            // $('.js-product-4').find('#add-to-cart-button').attr('visible', 'false');
+                            // $('.js-product-4').find('#add-to-cart-button-text').attr('visible', 'false');
+                            // $('.js-product-4').find('#js-gallery-thumb-box-1').attr('visible', 'false');
+                            // $('.js-product-4').find('#js-gallery-thumb-box-2').attr('visible', 'false');
+                            // $('.js-product-4').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            $('.js-product-2').find('#js-gallery-item-1').attr('visible', 'true');
+                            $('.js-product-2').find('#add-to-cart-button').attr('visible', 'true');
+                            $('.js-product-2').find('#add-to-cart-button-text').attr('visible', 'true');
+                            $('.js-product-2').find('#js-gallery-thumb-box-1').attr('visible', 'true');
+                            $('.js-product-2').find('#js-gallery-thumb-box-2').attr('visible', 'true');
+                            $('.js-product-2').find('#js-gallery-thumb-box-3').attr('visible', 'true');
+
+                            marker1 = false;
+                            marker2 = true;
+                            marker3 = false;
+                            marker4 = false;
+                        }
+                    }
+                    if (document.querySelector('#marker3').object3D.visible == true) {
+                        if (marker3 == false) {
+                            $('#marker3').find('.js-spawn').each(function (index, item) {
+                                item.emit('spawn');
+                            });
+
+                            $('.js-product-1').find('#js-gallery-item-1').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-item-2').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-item-3').attr('visible', 'false');
+                            $('.js-product-1').find('#add-to-cart-button').attr('visible', 'false');
+                            $('.js-product-1').find('#add-to-cart-button-text').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-thumb-box-1').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-thumb-box-2').attr('visible', 'false');
+                            $('.js-product-1').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            $('.js-product-2').find('#js-gallery-item-1').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-item-2').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-item-3').attr('visible', 'false');
+                            $('.js-product-2').find('#add-to-cart-button').attr('visible', 'false');
+                            $('.js-product-2').find('#add-to-cart-button-text').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-thumb-box-1').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-thumb-box-2').attr('visible', 'false');
+                            $('.js-product-2').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            // $('.js-product-4').find('#start-3d-animation-button').attr('visible', 'false');
+                            // $('.js-product-4').find('#start-3d-animation-button-text').attr('visible', 'false');
+                            // $('.js-product-4').find('#add-to-cart-button').attr('visible', 'false');
+                            // $('.js-product-4').find('#add-to-cart-button-text').attr('visible', 'false');
+                            // $('.js-product-4').find('#js-gallery-thumb-box-1').attr('visible', 'false');
+                            // $('.js-product-4').find('#js-gallery-thumb-box-2').attr('visible', 'false');
+                            // $('.js-product-4').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            $('.js-product-3').find('#js-gallery-item-1').attr('visible', 'true');
+                            $('.js-product-3').find('#add-to-cart-button').attr('visible', 'true');
+                            $('.js-product-3').find('#add-to-cart-button-text').attr('visible', 'true');
+                            $('.js-product-3').find('#js-gallery-thumb-box-1').attr('visible', 'true');
+                            $('.js-product-3').find('#js-gallery-thumb-box-2').attr('visible', 'true');
+                            $('.js-product-3').find('#js-gallery-thumb-box-3').attr('visible', 'true');
+
+                            marker1 = false;
+                            marker2 = false;
+                            marker3 = true;
+                            marker4 = false;
+                        }
+                    }
+                    // if (document.querySelector('#marker4').object3D.visible == true) {
+                    //     if (marker4 == false) {
+                    //         $('#marker4').find('.js-spawn').each(function (index, item) {
+                    //             item.emit('spawn');
+                    //         });
+                    //
+                    //         $('.js-product-1').find('#js-gallery-item-1').attr('visible', 'false');
+                    //         $('.js-product-1').find('#js-gallery-item-2').attr('visible', 'false');
+                    //         $('.js-product-1').find('#js-gallery-item-3').attr('visible', 'false');
+                    //         $('.js-product-1').find('#add-to-cart-button').attr('visible', 'false');
+                    //         $('.js-product-1').find('#add-to-cart-button-text').attr('visible', 'false');
+                    //
+                    //         $('.js-product-2').find('#js-gallery-item-1').attr('visible', 'false');
+                    //         $('.js-product-2').find('#js-gallery-item-2').attr('visible', 'false');
+                    //         $('.js-product-2').find('#js-gallery-item-3').attr('visible', 'false');
+                    //         $('.js-product-2').find('#add-to-cart-button').attr('visible', 'false');
+                    //         $('.js-product-2').find('#add-to-cart-button-text').attr('visible', 'false');
+                    //
+                    //         $('.js-product-3').find('#js-gallery-item-1').attr('visible', 'false');
+                    //         $('.js-product-3').find('#js-gallery-item-2').attr('visible', 'false');
+                    //         $('.js-product-3').find('#js-gallery-item-3').attr('visible', 'false');
+                    //         $('.js-product-3').find('#add-to-cart-button').attr('visible', 'false');
+                    //         $('.js-product-3').find('#add-to-cart-button-text').attr('visible', 'false');
+                    //
+                    //         // $('.js-product-4').find('#start-3d-animation-button').attr('visible', 'true');
+                    //         // $('.js-product-4').find('#start-3d-animation-button-text').attr('visible', 'true');
+                    //         // $('.js-product-4').find('#add-to-cart-button').attr('visible', 'true');
+                    //         // $('.js-product-4').find('#add-to-cart-button-text').attr('visible', 'true');
+                    //
+                    //         marker1 = false;
+                    //         marker2 = false;
+                    //         marker3 = false;
+                    //         marker4 = true;
+                    //     }
+                    // }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <a-scene embedded arjs="debugUIEnabled: false;">
+
+          <!--a-asset-item id="toque" src="../addons/click.mp3" response-type="arraybuffer"></a-asset-item-->
+
+            <a-entity camera look-controls mouse-cursor>
+
+                <!-- Product 1-->
+                <a-marker id="marker1" preset="custom" type="pattern" url="../addons/qr2.patt">
+                    <a-entity class="js-product-1" scale="2 2 2">
+                        <!-- Product gallery thumbnails -->
+                        <a-box id="js-gallery-thumb-box-1"  position="10 10 10" rotation="-90 0 0" color="#151c49" width="0.25" height="0.25" depth="0.1" markerhandler>
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#151c49" dur="1" begin="unpress"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="1 0.03 0.85" to="-0.37 0.03 0.85" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+                        <a-image class="js-gallery-item-nav" data-product-id="1" data-item-id="1" position="10 10 10" rotation="-90 0 0"
+                                 src="../product_1/item1_thumb.jpg" fit-texture width="0.25" height="0.25">
+                            <a-animation class="js-spawn" attribute="position" from="1 0.09 0.85" to="-0.37 0.1 0.85" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+
+                        <a-box id="js-gallery-thumb-box-2" position="10 10 10" rotation="-90 0 0" color="#151c49" width="0.25" height="0.25" depth="0.1">
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#151c49" dur="1" begin="unpress"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="1 0.03 0.85" to="0 0.03 0.85" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+                        <a-image class="js-gallery-item-nav" data-product-id="1" data-item-id="2" position="10 10 10" rotation="-90 0 0"
+                                 src="../product_1/item2_thumb.jpg" fit-texture width="0.25" height="0.25">
+                            <a-animation class="js-spawn" attribute="position" from="1 0.09 0.85" to="0 0.1 0.85" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <a-box id="js-gallery-thumb-box-3" position="10 10 10" rotation="-90 0 0" color="#151c49" width="0.25" height="0.25" depth="0.1">
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#151c49" dur="1" begin="unpress"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="1 0.03 0.85" to="0.37 0.03 0.85" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+                        <a-image class="js-gallery-item-nav" data-product-id="1" data-item-id="3" position="10 10 10" rotation="-90 0 0"
+                                 src="../product_1/item3_thumb.jpg" fit-texture width="0.25" height="0.25">
+                            <a-animation class="js-spawn" attribute="position" from="1 0.09 0.85" to="0.37 0.1 0.85" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <!-- Product gallery images -->
+                        <a-image id="js-gallery-item-3" position="10 10 10" rotation="-90 0 0" src="../product_1/item3.jpg" fit-texture width="1" height="1.4">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" from="-90 0 0" to="-450 0 0" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0 10 0" to="0 0 0" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+                        <a-image id="js-gallery-item-2" position="10 10 10" rotation="-90 0 0" src="../product_1/item2.jpg" fit-texture width="1" height="1.4">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" from="-90 0 0" to="-450 0 0" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0 10 0" to="0 0 0" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+                        <a-image id="js-gallery-item-1" position="10 10 10" rotation="-90 0 0" src="../product_1/item1.jpg" fit-texture width="1" height="1.4">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" from="-90 0 0" to="-450 0 0" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0 10 0" to="0 0 0" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <!-- Product Info -->
+                        <a-plane position="10 10 10" rotation="-90 0 0" color="#d2edfe" width="0.8" height="1.4">
+                            <a-animation class="js-spawn" attribute="position" from="0 -10 0" to="0.93 0 0" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-plane>
+
+                        <a-text position="10 10 10" rotation="-90 0 0" value="CALCA JEANS RETRO" align="left" align="center"
+                                color="#151c49" wrap-count="20" width="0.6" height="1.4">
+                            <a-animation class="js-spawn" attribute="position" from="-10 0 0" to="0.58 0.03 -0.55" delay="500" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+
+                        <a-text position="10 10 10" rotation="-90 0 0" scale="0.9 0.9 0" value="139,90 REAIS" align="left" color="#151c49" wrap-count="25"
+                                width="0.7" height="1.4">
+                            <a-animation class="js-spawn" attribute="position" from="-10 0 0" to="0.58 0.03 -0.45" delay="600" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+
+                        <a-text position="10 10 10" rotation="-90 0 0" scale="0.9 0.9 0"
+                                value="Calca estilo retro.\n\nJeans longa e elegante..\n\nOusada e charmosa!!"
+                                align="left" align="center" color="#151c49" wrap-count="24" width="0.7" height="1.4">
+                            <a-animation class="js-spawn" attribute="position" from="-10 0 0" to="0.58 0.03 -0.15" delay="700" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+
+                        <!-- Add to cart (button & text) -->
+                        <a-box id="add-to-cart-button" class="js-add-to-cart" data-product-id="1" position="10 10 10" rotation="-90 0 0" color="#151c49" width="0.4" depth="0.1"
+                               height="0.09">
+
+                            <a-animation attribute="position" from="0.78 0.03 0.25" to="0.78 -0.01 0.25" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+
+                            <a-animation attribute="position" from="0.78 -0.01 0.25" to="0.78 0.03 0.25" delay="500" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#7fc954" to="#151c49" delay="500" dur="500" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0.78 10 0.25" to="0.78 0.03 0.25" delay="700" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+
+                        <a-text id="add-to-cart-button-text" class="js-add-to-cart" data-product-id="1" position="10 10 10" rotation="-90 0 0" scale="0.9 0.9 0"
+                                value="CESTA DE COMPRAS" align="center" color="#FFF"
+                                wrap-count="35" width="0.7" height="1.4">
+                            <a-animation attribute="position" from="0.78 0.09 0.25" to="0.78 0.05 0.25" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="position" from="0.78 0.05 0.25" to="0.78 0.09 0.25" delay="500" dur="500" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0.78 10 0.25" to="0.78 0.09 0.25" delay="700" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+                    </a-entity>
+                </a-marker>
+
+                <!-- Product 2 -->
+                <a-marker id="marker2" preset="custom" type="pattern" url="../addons/qr3.patt">
+                    <a-entity class="js-product-2" scale="2 2 2">
+
+                        <!-- Product gallery thumbnails -->
+                        <a-box id="js-gallery-thumb-box-1" position="-0.37 0.03 0.85" rotation="-90 0 0" color="#151c49" width="0.25" height="0.25" depth="0.1">
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#151c49" dur="1" begin="unpress"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="rotation" from="-90 0 0" to="630 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+                        <a-image class="js-gallery-item-nav" data-product-id="2" data-item-id="1" position="-0.37 0.1 0.85" rotation="-90 0 0"
+                                 src="../product_2/item1_thumb.jpg" fit-texture width="0.25" height="0.25">
+                            <a-animation class="js-spawn" attribute="rotation" from="-90 0 0" to="630 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <a-box id="js-gallery-thumb-box-2" position="0 0.03 0.85" rotation="-90 0 0" color="#151c49" width="0.25" height="0.25" depth="0.1">
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#151c49" dur="1" begin="unpress"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="rotation" from="-90 0 0" to="630 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+                        <a-image class="js-gallery-item-nav" data-product-id="2" data-item-id="2" position="0 0.1 0.85" rotation="-90 0 0"
+                                 src="../product_2/item2_thumb.jpg" fit-texture width="0.25" height="0.25">
+                            <a-animation class="js-spawn" attribute="rotation" from="-90 0 0" to="630 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <a-box id="js-gallery-thumb-box-3" position="0.37 0.03 0.85" rotation="-90 0 0" color="#151c49" width="0.25" height="0.25" depth="0.1">
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#151c49" dur="1" begin="unpress"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="rotation" from="-90 0 0" to="630 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+                        <a-image class="js-gallery-item-nav" data-product-id="2" data-item-id="3" position="0.37 0.1 0.85" rotation="-90 0 0"
+                                 src="../product_2/item3_thumb.jpg" fit-texture width="0.25" height="0.25">
+                            <a-animation class="js-spawn" attribute="rotation" from="-90 0 0" to="630 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <!-- Product gallery images -->
+                        <a-image id="js-gallery-item-1" position="0 0 0" rotation="-90 0 0" src="../product_2/item1.jpg" fit-texture width="1" height="1.4">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" from="-90 0 0" to="-450 0 0" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="rotation" from="-90 0 0" to="270 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+                        <a-image id="js-gallery-item-2" position="0 0 0" rotation="-90 0 0" src="../product_2/item2.jpg" fit-texture width="1" height="1.4">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" from="-90 0 0" to="-450 0 0" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="rotation" from="-90 0 0" to="270 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+                        <a-image id="js-gallery-item-3" position="0 0 0" rotation="-90 0 0" src="../product_2/item3.jpg" fit-texture width="1" height="1.4">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" from="-90 0 0" to="-450 0 0" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="rotation" from="-90 0 0" to="270 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <!-- Product Info -->
+                        <a-plane position="0.93 0 0" rotation="-90 0 0" color="#d2edfe" width="0.8" height="1.4"></a-plane>
+
+                        <a-text position="10 10 10" rotation="-90 0 0" value="BOTA DE SALTO BEGE" align="left" align="center"
+                                color="#151c49" wrap-count="20" width="0.6" height="1.4">
+
+                            <a-animation class="js-spawn" attribute="position" from="0.58 -0.1 -0.55" to="0.58 0.03 -0.55" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+
+                        <a-text position="10 10 10" rotation="-90 0 0" scale="0.9 0.9 0" value="89,89 REAIS" align="left" color="#151c49" wrap-count="25"
+                                width="0.7" height="1.4">
+
+                            <a-animation class="js-spawn" attribute="position" from="0.58 -0.1 -0.45" to="0.58 0.03 -0.45" delay="300" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+
+                        <a-text position="10 10 10" rotation="-90 0 0" scale="0.9 0.9 0"
+                                value="Indispensavel no seu armario.\n\nSe encaixa perfeitamente com muitos vestidos e saias em tons de inverno.\n\nCombina com voce."
+                                align="left" align="center" color="#151c49" wrap-count="24" width="0.7" height="1.4">
+
+                            <a-animation class="js-spawn" attribute="position" from="0.58 -0.1 -0.15" to="0.58 0.03 -0.15" delay="400" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+
+                        <!-- Add to cart (button & text) -->
+                        <a-box id="add-to-cart-button" class="js-add-to-cart" data-product-id="2" position="10 10 10" rotation="-90 0 0" color="#151c49" width="0.4" depth="0.1"
+                               height="0.09">
+
+                            <a-animation attribute="position" from="0.78 0.03 0.25" to="0.78 -0.01 0.25" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+
+                            <a-animation attribute="position" from="0.78 -0.01 0.25" to="0.78 0.03 0.25" delay="500" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#7fc954" to="#151c49" delay="500" dur="500" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0.78 -0.1 0.25" to="0.78 0.03 0.25" delay="500" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+
+                        <a-text id="add-to-cart-button-text" class="js-add-to-cart" data-product-id="2" position="10 10 10" rotation="-90 0 0" scale="0.9 0.9 0"
+                                value="CESTA DE COMPRAS" align="center" color="#FFF"
+                                wrap-count="35" width="0.7" height="1.4">
+                            <a-animation attribute="position" from="0.78 0.09 0.25" to="0.78 0.05 0.25" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="position" from="0.78 0.05 0.25" to="0.78 0.09 0.25" delay="500" dur="500" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0.78 -0.1 0.25" to="0.78 0.09 0.25" delay="300" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+                    </a-entity>
+                </a-marker>
+
+                <!-- Product 3 -->
+                <a-marker id="marker3" preset="custom" type="pattern" url="../addons/qr1.patt">
+
+                    <a-entity class="js-product-3" scale="2 2 2">
+
+                        <!-- Product gallery thumbnails -->
+                        <a-box id="js-gallery-thumb-box-1" position="10 10 10" rotation="-90 0 0" color="#151c49" width="0.25" height="0.25" depth="0.1">
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#151c49" dur="1" begin="unpress"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="-0.37 5 0.85" to="-0.37 0.03 0.85" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+                        <a-image class="js-gallery-item-nav" data-product-id="3" data-item-id="1" position="10 10 10" rotation="-90 0 0"
+                                 src="../product_3/item1_thumb.jpg" fit-texture width="0.25" height="0.25">
+
+                            <a-animation class="js-spawn" attribute="position" from="-0.37 5 0.85" to="-0.37 0.1 0.85" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <a-box id="js-gallery-thumb-box-2" position="10 10 10" rotation="-90 0 0" color="#151c49" width="0.25" height="0.25" depth="0.1">
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#151c49" dur="1" begin="unpress"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0 5 0.85" to="0 0.03 0.85" delay="100" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+                        <a-image class="js-gallery-item-nav" data-product-id="3" data-item-id="2" position="10 10 10" rotation="-90 0 0"
+                                 src="../product_3/item2_thumb.jpg" fit-texture width="0.25" height="0.25">
+
+                            <a-animation class="js-spawn" attribute="position" from="0 5 0.85" to="0 0.1 0.85" delay="300" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <a-box id="js-gallery-thumb-box-3" position="10 10 10" rotation="-90 0 0" color="#151c49" width="0.25" height="0.25" depth="0.1">
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#151c49" dur="1" begin="unpress"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0.37 5 0.85" to="0.37 0.03 0.85" delay="200" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+                        <a-image class="js-gallery-item-nav" data-product-id="3" data-item-id="3" position="10 10 10" rotation="-90 0 0"
+                                 src="../product_3/item3_thumb.jpg" fit-texture width="0.25" height="0.25">
+
+                            <a-animation class="js-spawn" attribute="position" from="0.37 5 0.85" to="0.37 0.1 0.85" delay="400" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <!-- Product gallery images -->
+                        <a-image id="js-gallery-item-1" position="10 10 10" rotation="-90 0 0" src="../product_3/item1.jpg" fit-texture width="1" height="1.4">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" from="-90 0 0" to="-450 0 0" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0 -10 0" to="0 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+                        <a-image id="js-gallery-item-2" position="10 10 10" rotation="-90 0 0" src="../product_3/item2.jpg" fit-texture width="1" height="1.4">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" from="-90 0 0" to="-450 0 0" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0 -10 0" to="0 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+                        <a-image id="js-gallery-item-3" position="10 10 10" rotation="-90 0 0" src="../product_3/item3.jpg" fit-texture width="1" height="1.4">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" from="-90 0 0" to="-450 0 0" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0 -10 0" to="0 0 0" dur="1000" begin="spawn"></a-animation>
+                        </a-image>
+
+                        <!-- Product Info -->
+                        <a-plane position="10 10 10" rotation="-90 0 0" color="#d2edfe" width="0.8" height="1.4">
+                            <a-animation class="js-spawn" attribute="position" from="0.93 -10 0" to="0.93 0 0" delay="400" dur="500" begin="spawn"></a-animation>
+                        </a-plane>
+
+                        <a-text position="10 10 10" rotation="-90 0 0" value="ABRIGO TWEED LARGO" align="left" align="center"
+                                color="#151c49" wrap-count="20" width="0.6" height="1.4">
+                            <a-animation class="js-spawn" attribute="position" from="0.58 10 -0.55" to="0.58 0.03 -0.55" delay="400" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+
+                        <a-text position="10 10 10" rotation="-90 0 0" scale="0.9 0.9 0" value="90,89 REAIS" align="left" color="#151c49" wrap-count="25"
+                                width="0.7" height="1.4">
+                            <a-animation class="js-spawn" attribute="position" from="0.58 10 -0.45" to="0.58 0.03 -0.45" delay="500" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+
+                        <a-text position="10 10 10" rotation="-90 0 0" scale="0.9 0.9 0"
+                                value="Casaco com gola redonda e mangas compridas.\n\nBolsos de peito e quadril vivos.\n\nFecho frontal com botões."
+                                align="left" align="center" color="#151c49" wrap-count="24" width="0.7" height="1.4">
+                            <a-animation class="js-spawn" attribute="position" from="0.58 10 -0.15" to="0.58 0.03 -0.15" delay="600" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+
+                        <!-- Add to cart (button & text) -->
+                        <a-box id="add-to-cart-button" class="js-add-to-cart" data-product-id="3" position="10 10 10" rotation="-90 0 0" color="#151c49" width="0.4" depth="0.1"
+                               height="0.09">
+
+                            <a-animation attribute="position" from="0.78 0.03 0.25" to="0.78 -0.01 0.25" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>
+
+                            <a-animation attribute="position" from="0.78 -0.01 0.25" to="0.78 0.03 0.25" delay="500" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="material.color" from="#7fc954" to="#151c49" delay="500" dur="500" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0.78 10 0.25" to="0.78 0.03 0.25" delay="800" dur="1000" begin="spawn"></a-animation>
+                        </a-box>
+
+                        <a-text id="add-to-cart-button-text" class="js-add-to-cart" data-product-id="3" position="10 10 10" rotation="-90 0 0" scale="0.9 0.9 0"
+                                value="CESTA DE COMPRAS" align="center" color="#FFF"
+                                wrap-count="35" width="0.7" height="1.4">
+                            <a-animation attribute="position" from="0.78 0.09 0.25" to="0.78 0.05 0.25" dur="500" begin="press"></a-animation>
+                            <a-animation attribute="position" from="0.78 0.05 0.25" to="0.78 0.09 0.25" delay="500" dur="500" begin="press"></a-animation>
+
+                            <a-animation class="js-spawn" attribute="position" from="0.78 10 0.25" to="0.78 0.09 0.25" delay="800" dur="1000" begin="spawn"></a-animation>
+                        </a-text>
+                    </a-entity>
+                </a-marker>
+
+                <!-- Product 3d -->
+                <!--<a-marker id="marker4" preset="custom" type="pattern" url="pattern-marker-wijs-logo.patt">-->
+                    <!--<a-entity class="js-product-4">-->
+                        <!--<a-gltf-model src="srcToGltf" position="0.1 -0.5 1.4" class="js-3d-model" rotation="-90 0 0" scale="0.3 0.3 0.3" visible="false">-->
+                            <!--<a-animation class="js-spawn" attribute="visible" from="false" to="true" dur="100" delay="1500" begin="spawn"></a-animation>-->
+                        <!--</a-gltf-model>-->
+
+                        <!--<a-gltf-model src="srcToGltf" position="-1.2 -0.5 1.4" class="js-3d-model" rotation="-90 0 0" scale="0.3 0.3 0.3" visible="false">-->
+                            <!--<a-animation class="js-spawn" attribute="visible" from="false" to="true" dur="100" delay="1500" begin="spawn"></a-animation>-->
+                        <!--</a-gltf-model>-->
+
+                        <!-- BACKGROUND -->
+                        <!--<a-box position="10 10 10"  rotation="-90 0 0" color="#878787" width="3" height="3" depth="0.1">-->
+                            <!--<a-animation class="js-spawn" attribute="position" from="-0.5 -10 0" to="-0.5 -1 0" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-box>-->
+
+                        <!--&lt;!&ndash; LEFT &ndash;&gt;-->
+                        <!--<a-box position="10 10 10"  rotation="0 90 0" color="#878787" width="3" height="1" depth="0.1">-->
+                            <!--<a-animation class="js-spawn" attribute="position" from="-10 -0.5 0" to="-2 -0.5 0" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-box>-->
+
+                        <!--&lt;!&ndash; RIGHT &ndash;&gt;-->
+                        <!--<a-box position="10 10 10"  rotation="0 90 0" color="#878787" width="3" height="1" depth="0.1">-->
+                            <!--<a-animation class="js-spawn" attribute="position" from="10 -0.5 0" to="1 -0.5 0" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-box>-->
+
+                        <!--&lt;!&ndash; FLOOR &ndash;&gt;-->
+                        <!--<a-box position="10 10 10"  rotation="0 0 90" color="#878787" width="1" height="3.1" depth="0.1">-->
+                            <!--<a-animation class="js-spawn" attribute="position" from="-0.5 -0.5 10" to="-0.5 -0.5 1.5" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-box>-->
+
+                        <!-- PRODUCT INFO -->
+                        <!--<a-box position="10 10 10"  rotation="-90 0 0" color="#d2edfe" width="2" height="3" depth="0.1">-->
+                            <!--<a-animation class="js-spawn" attribute="position" from="2.2 -10 0" to="2.2 0 0" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-box>-->
+
+                        <!--<a-text position="10 10 10"  rotation="-90 0 0" value="HIPPE JEANS IN COMBO MET HEMD OF SHIRT" align="left" align="center"-->
+                                <!--color="#151c49" wrap-count="20" width="1.6" height="1.4">-->
+                            <!--<a-animation class="js-spawn" attribute="position" from="1.38 3 -1.25" to="1.38 0.1 -1.25" delay="500" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-text>-->
+
+                        <!--<a-text position="10 10 10"  rotation="-90 0 0" scale="0.9 0.9 0" value="250 EUR" align="left" color="#151c49" wrap-count="18"-->
+                                <!--width="1.5" height="1.4">-->
+                            <!--<a-animation class="js-spawn" attribute="position" from="1.38 3 -0.8" to="1.38 0.1 -0.8" delay="500" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-text>-->
+
+                        <!--<a-text position="10 10 10"  rotation="-90 0 0" scale="0.9 0.9 0"-->
+                                <!--value="Stijn zijn fris lichtblauw hemd biedt voldoende contrast op de donkere jeans.\n\n De groene longsleeve accentueert Koen zijn blauwe ogen."-->
+                                <!--align="left" align="center" color="#151c49" wrap-count="30" width="1.8" height="1.4">-->
+                            <!--<a-animation class="js-spawn" attribute="position" from="1.38 3 -0.25" to="1.38 0.1 -0.25" delay="500" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-text>-->
+
+                        <!-- Start 3d -->
+                        <!--<a-box position="10 10 10" id="start-3d-animation-button" data-product-id="4" class="js-start-3d-animation" position="2 0.1 0.5" rotation="-90 0 0" color="#151c49" width="1.2" depth="0.1" height="0.2">-->
+                            <!--<a-animation attribute="depth" from="0.1" to="0" dur="500" begin="press"></a-animation>-->
+                            <!--<a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>-->
+
+                            <!--<a-animation attribute="depth" from="0" to="0.1" delay="500" dur="500" begin="press"></a-animation>-->
+                            <!--<a-animation attribute="material.color" from="#7fc954" to="#151c49" delay="500" dur="500" begin="press"></a-animation>-->
+
+                            <!--<a-animation class="js-spawn" attribute="position" from="2 5 0.5" to="2 0.1 0.5" delay="500" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-box>-->
+
+                        <!--<a-text position="10 10 10" id="start-3d-animation-button-text" data-product-id="4" class="js-start-3d-animation" position="2 0.17 0.5" rotation="-90 0 0" scale="0.9 0.9 0"-->
+                                <!--value="SWAG MODE" align="center" color="#FFF"-->
+                                <!--wrap-count="35" width="2" height="1.4">-->
+                            <!--<a-animation attribute="position" from="2 0.2 0.5" to="2 0.14 0.5" dur="500" begin="press"></a-animation>-->
+                            <!--<a-animation attribute="position" from="2 0.14 0.5" to="2 0.2 0.5" delay="500" dur="500" begin="press"></a-animation>-->
+
+                            <!--<a-animation class="js-spawn" attribute="position" from="2 5 0.5" to="2 0.2 0.5" delay="500" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-text>-->
+
+                        <!-- Add to cart -->
+                        <!--<a-box position="10 10 10" id="add-to-cart-button" data-product-id="4" class="js-add-to-cart" position="2 0.1 0.8" rotation="-90 0 0" color="#151c49" width="1.2" depth="0.1" height="0.2">-->
+                            <!--<a-animation attribute="depth" from="0.1" to="0" dur="500" begin="press"></a-animation>-->
+                            <!--<a-animation attribute="material.color" from="#151c49" to="#7fc954" dur="500" begin="press"></a-animation>-->
+
+                            <!--<a-animation attribute="depth" from="0" to="0.1" delay="500" dur="500" begin="press"></a-animation>-->
+                            <!--<a-animation attribute="material.color" from="#7fc954" to="#151c49" delay="750" dur="500" begin="press"></a-animation>-->
+
+                            <!--<a-animation class="js-spawn" attribute="position" from="2 5 0.8" to="2 0.1 0.8" delay="550" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-box>-->
+
+                        <!--<a-text position="10 10 10" id="add-to-cart-button-text" data-product-id="4" class="js-add-to-cart" position="2 0.17 0.8" rotation="-90 0 0" scale="0.9 0.9 0"-->
+                                <!--value="IN WINKELMANDJE" align="center" color="#FFF"-->
+                                <!--wrap-count="35" width="2" height="1.4">-->
+                            <!--<a-animation attribute="position" from="2 0.2 0.8" to="2 0.14 0.8" dur="500" begin="press"></a-animation>-->
+                            <!--<a-animation attribute="position" from="2 0.14 0.8" to="2 0.2 0.8" delay="750" dur="500" begin="press"></a-animation>-->
+
+                            <!--<a-animation class="js-spawn" attribute="position" from="2 5 0.8" to="2 0.2 0.8" delay="550" dur="1000" begin="spawn"></a-animation>-->
+                        <!--</a-text>-->
+                    <!--</a-entity>-->
+                <!--</a-marker>-->
+        </a-scene>
+
+        <div class="lightbox js-cart">
+            <h1>Carrinho de compras</h1>
+            <div class="js-cart-content">
+                <!-- Product 1 -->
+                <div class="js-cart-item o-grid o-grid--gutter-lg o-grid--gutter-bp3 is-hidden" data-item-id="1">
+                    <div class="o-grid__item u-4-of-12 u-3-of-12-bp3">
+                        <a href="https://www.zara.com/es/es/jeans-z1975-cintura-paperbag-p05862187.html?v1=7127081&v2=1074744">
+                            <div class="c-tile c-tile--beta u-pb-zero">
+                                <figure>
+                                    <img src="../product_1/item1_thumb.jpg">
+                                </figure>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="o-grid__item u-8-of-12 u-4-of-12-bp3 u-5-of-12-bp4">
+                        <h3 class="u-mb-one">
+                            <a href="https://www.zara.com/es/es/jeans-z1975-cintura-paperbag-p05862187.html?v1=7127081&v2=1074744" class="u-no-link">CALCA JEANS RETRO</a>
+                        </h3>
+
+                        <p>Em estoque</p>
+                    </div>
+                    <div class="o-grid__item u-6-of-12 u-2-of-12-bp3 u-text-right">
+                        <strong><span class="js-inclusive-amount">139,90 REAIS</span></strong>
+                    </div>
+                    <div class="o-grid__item u-6-of-12 u-3-of-12-bp3 u-2-of-12-bp4">
+                        <div class="o-flex">
+                            <a class="js-delete c-button c-button--delete c-button--md" href="#!" data-item-id="1">
+                                <svg role="img" class="c-symbol c-symbol-icon-cancel">
+                                    <use xmlns:xlink="https://www.zara.com/es/es/jeans-z1975-cintura-paperbag-p05862187.html?v1=7127081&v2=1074744"
+                                         xlink:href="svg-symbols.svg#c-symbol-icon-cancel"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="js-cart-item o-grid o-grid--gutter-lg o-grid--gutter-bp3 is-hidden" data-item-id="2">
+                    <div class="o-grid__item u-4-of-12 u-3-of-12-bp3">
+                        <a href="https://www.zara.com/es/es/bot%C3%ADn-tac%C3%B3n-fruncido-piel-p16136301.html?v1=6452459&v2=1074744">
+                            <div class="c-tile c-tile--beta u-pb-zero">
+                                <figure>
+                                    <img src="../product_2/item1_thumb.jpg">
+                                </figure>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="o-grid__item u-8-of-12 u-4-of-12-bp3 u-5-of-12-bp4">
+                        <h3 class="u-mb-one">
+                            <a href="https://www.zara.com/es/es/bot%C3%ADn-tac%C3%B3n-fruncido-piel-p16136301.html?v1=6452459&v2=1074744" class="u-no-link">BOTA DE SALTO BEGE</a>
+                        </h3>
+
+                        <p>Em estoque</p>
+                    </div>
+                    <div class="o-grid__item u-6-of-12 u-2-of-12-bp3 u-text-right">
+                        <strong><span class="js-inclusive-amount">89,89 REAIS</span></strong>
+                    </div>
+                    <div class="o-grid__item u-6-of-12 u-3-of-12-bp3 u-2-of-12-bp4">
+                        <div class="o-flex">
+                            <a class="js-delete c-button c-button--delete c-button--md" href="#!" data-item-id="2">
+                                <svg role="img" class="c-symbol c-symbol-icon-cancel">
+                                    <use xmlns:xlink="https://www.zara.com/es/es/bot%C3%ADn-tac%C3%B3n-fruncido-piel-p16136301.html?v1=6452459&v2=1074744"
+                                         xlink:href="svg-symbols.svg#c-symbol-icon-cancel"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="js-cart-item o-grid o-grid--gutter-lg o-grid--gutter-bp3 is-hidden" data-item-id="3">
+                    <div class="o-grid__item u-4-of-12 u-3-of-12-bp3">
+                        <a href="https://www.zara.com/es/es/abrigo-tweed-largo-p08177608.html?v1=7378618&v2=1074744">
+                            <div class="c-tile c-tile--beta u-pb-zero">
+                                <figure>
+                                    <img src="../product_3/item1_thumb.jpg">
+                                </figure>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="o-grid__item u-8-of-12 u-4-of-12-bp3 u-5-of-12-bp4">
+                        <h3 class="u-mb-one">
+                            <a href="https://www.zara.com/es/es/abrigo-tweed-largo-p08177608.html?v1=7378618&v2=1074744" class="u-no-link">ABRIGO TWEED LARGO</a>
+                        </h3>
+
+                        <p>Em estoque</p>
+                    </div>
+                    <div class="o-grid__item u-6-of-12 u-2-of-12-bp3 u-text-right">
+                        <strong><span class="js-inclusive-amount">90,89 REAIS</span></strong>
+                    </div>
+                    <div class="o-grid__item u-6-of-12 u-3-of-12-bp3 u-2-of-12-bp4">
+                        <div class="o-flex">
+                            <a class="js-delete c-button c-button--delete c-button--md" href="#!" data-item-id="3">
+                                <svg role="img" class="c-symbol c-symbol-icon-cancel">
+                                    <use xmlns:xlink="https://www.zara.com/es/es/abrigo-tweed-largo-p08177608.html?v1=7378618&v2=1074744"
+                                         xlink:href="svg-symbols.svg#c-symbol-icon-cancel"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="js-cart-item o-grid o-grid--gutter-lg o-grid--gutter-bp3 is-hidden" data-item-id="4">
+                    <div class="o-grid__item u-4-of-12 u-3-of-12-bp3">
+                        <a href="https://www.zara.com/es/es/-pL1806006.html?v1=7550555&v2=1074744">
+                            <div class="c-tile c-tile--beta u-pb-zero">
+                                <figure>
+                                    <img src="../product_4/item1_thumb.jpg">
+                                </figure>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="o-grid__item u-8-of-12 u-4-of-12-bp3 u-5-of-12-bp4">
+                        <h3 class="u-mb-one">
+                            <a href="https://www.zara.com/es/es/-pL1806006.html?v1=7550555&v2=1074744" class="u-no-link">ESTILO VINTAGE</a>
+                        </h3>
+
+                        <p>Em estoque</p>
+                    </div>
+                    <div class="o-grid__item u-6-of-12 u-2-of-12-bp3 u-text-right">
+                        <strong><span class="js-inclusive-amount">250 REAIS</span></strong>
+                    </div>
+                    <div class="o-grid__item u-6-of-12 u-3-of-12-bp3 u-2-of-12-bp4">
+                        <div class="o-flex">
+                            <a class="js-delete c-button c-button--delete c-button--md" href="#!" data-item-id="4">
+                                <svg role="img" class="c-symbol c-symbol-icon-cancel">
+                                    <use xmlns:xlink="https://www.zara.com/es/es/-pL1806006.html?v1=7550555&v2=1074744"
+                                         xlink:href="svg-symbols.svg#c-symbol-icon-cancel"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            this.scene = document.querySelector('a-scene');
+            this.scene.renderer.gammaInput = true;
+            this.scene.renderer.gammaOutput = true;
+        </script>
+    </body>
+</html>
