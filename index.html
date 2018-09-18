@@ -35,7 +35,7 @@
                             $('#marker1').find('.js-spawn').each(function (index, item) {
                                 item.emit('spawn');
                             });
-
+                            /*
                             $('.js-product-2').find('#js-gallery-item-1').attr('visible', 'false');
                             $('.js-product-2').find('#js-gallery-item-2').attr('visible', 'false');
                             $('.js-product-2').find('#js-gallery-item-3').attr('visible', 'false');
@@ -53,6 +53,8 @@
                             $('.js-product-3').find('#js-gallery-thumb-box-1').attr('visible', 'false');
                             $('.js-product-3').find('#js-gallery-thumb-box-2').attr('visible', 'false');
                             $('.js-product-3').find('#js-gallery-thumb-box-3').attr('visible', 'false');
+
+                            */
 
                             // $('.js-product-4').find('#start-3d-animation-button').attr('visible', 'false');
                             // $('.js-product-4').find('#start-3d-animation-button-text').attr('visible', 'false');
@@ -70,19 +72,23 @@
                             $('.js-product-1').find('#js-gallery-thumb-box-3').attr('visible', 'true');
 
                             marker1 = true;
-                            marker2 = false;
-                            marker3 = false;
-                            marker4 = false;
+                            //marker2 = false;
+                            //marker3 = false;
+                            //marker4 = false;
                         }
 
+                    } else {
+
+                      marker1 = false;
                     }
+                    
                     if (document.querySelector('#marker2').object3D.visible == true) {
                         if (marker2 == false) {
                             $('#marker2').find('.js-spawn').each(function (index, item) {
                                 item.emit('spawn');
                             });
-
-                            $('.js-product-1').find('#js-gallery-item-1').attr('visible', 'false');
+                            /*
+                           $('.js-product-1').find('#js-gallery-item-1').attr('visible', 'false');
                             $('.js-product-1').find('#js-gallery-item-2').attr('visible', 'false');
                             $('.js-product-1').find('#js-gallery-item-3').attr('visible', 'false');
                             $('.js-product-1').find('#add-to-cart-button').attr('visible', 'false');
@@ -100,6 +106,8 @@
                             $('.js-product-3').find('#js-gallery-thumb-box-2').attr('visible', 'false');
                             $('.js-product-3').find('#js-gallery-thumb-box-3').attr('visible', 'false');
 
+                            */
+
                             // $('.js-product-4').find('#start-3d-animation-button').attr('visible', 'false');
                             // $('.js-product-4').find('#start-3d-animation-button-text').attr('visible', 'false');
                             // $('.js-product-4').find('#add-to-cart-button').attr('visible', 'false');
@@ -115,18 +123,22 @@
                             $('.js-product-2').find('#js-gallery-thumb-box-2').attr('visible', 'true');
                             $('.js-product-2').find('#js-gallery-thumb-box-3').attr('visible', 'true');
 
-                            marker1 = false;
+                            //marker1 = false;
                             marker2 = true;
-                            marker3 = false;
-                            marker4 = false;
+                            //marker3 = false;
+                            //marker4 = false;
                         }
+                    } else {
+                      marker2 = false;
                     }
+
+
                     if (document.querySelector('#marker3').object3D.visible == true) {
                         if (marker3 == false) {
                             $('#marker3').find('.js-spawn').each(function (index, item) {
                                 item.emit('spawn');
                             });
-
+                            /*
                             $('.js-product-1').find('#js-gallery-item-1').attr('visible', 'false');
                             $('.js-product-1').find('#js-gallery-item-2').attr('visible', 'false');
                             $('.js-product-1').find('#js-gallery-item-3').attr('visible', 'false');
@@ -145,6 +157,8 @@
                             $('.js-product-2').find('#js-gallery-thumb-box-2').attr('visible', 'false');
                             $('.js-product-2').find('#js-gallery-thumb-box-3').attr('visible', 'false');
 
+                            */
+
                             // $('.js-product-4').find('#start-3d-animation-button').attr('visible', 'false');
                             // $('.js-product-4').find('#start-3d-animation-button-text').attr('visible', 'false');
                             // $('.js-product-4').find('#add-to-cart-button').attr('visible', 'false');
@@ -160,11 +174,13 @@
                             $('.js-product-3').find('#js-gallery-thumb-box-2').attr('visible', 'true');
                             $('.js-product-3').find('#js-gallery-thumb-box-3').attr('visible', 'true');
 
-                            marker1 = false;
-                            marker2 = false;
+                            //marker1 = false;
+                            //marker2 = false;
                             marker3 = true;
-                            marker4 = false;
+                            //marker4 = false;
                         }
+                    } else {
+                      marker3 = false;
                     }
                     // if (document.querySelector('#marker4').object3D.visible == true) {
                     //     if (marker4 == false) {
